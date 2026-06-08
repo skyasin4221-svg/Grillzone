@@ -23,7 +23,8 @@ const bebas = Bebas_Neue({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://grillzoneoriginal.example"),
+  metadataBase: new URL("https://grillzoneoriginal.co.uk"),
+  applicationName: site.name,
   title: {
     default: `${site.name} | Freshly Grilled Chicken, Burgers & Peri Peri`,
     template: `%s | ${site.name}`
@@ -38,17 +39,30 @@ export const metadata: Metadata = {
     "burgers",
     "restaurant"
   ],
+  alternates: {
+    canonical: "/"
+  },
   openGraph: {
     title: site.name,
     description: "Authentic taste, freshly grilled. Explore the Grill Zone Original menu.",
+    url: "/",
+    siteName: site.name,
     images: [
       {
-        url: "https://img3.restaurantguru.com/c844-Restaurant-Grill-Zone-Original-meals.jpg",
+        url: "/images/grillzone-hero-red-white-v2.png",
         width: 1200,
         height: 630,
-        alt: "Meals at Grill Zone Original"
+        alt: "Fresh Grill Zone Original food spread"
       }
-    ]
+    ],
+    locale: "en_GB",
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: site.name,
+    description: "Freshly grilled chicken, burgers, peri peri, doner wraps and Sunday Nashta.",
+    images: ["/images/grillzone-hero-red-white-v2.png"]
   }
 };
 
