@@ -12,7 +12,7 @@ export function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="fixed left-0 right-0 top-0 z-50 border-b border-red-100 bg-white/92 text-black shadow-lg shadow-red-600/10 backdrop-blur-xl">
+    <header className="fixed left-0 right-0 top-0 z-50 border-b border-red-200/70 bg-[#fff7f2]/96 text-black shadow-lg shadow-red-900/10 backdrop-blur-xl">
       <nav className="container-pad flex h-20 items-center justify-between">
         <Link href="/" className="flex min-w-0 items-center gap-2 sm:gap-3" onClick={() => setOpen(false)}>
           <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-grillRed font-display text-2xl leading-none text-white sm:h-12 sm:w-12 sm:text-3xl">

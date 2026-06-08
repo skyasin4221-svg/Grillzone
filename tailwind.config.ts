@@ -9,8 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        grillRed: "#FF0000",
-        grillBlack: "#111111"
+        grillRed: "#D90404",
+        grillBlack: "#1A1010"
       },
       fontFamily: {
         sans: ["var(--font-inter)", "Arial", "sans-serif"],

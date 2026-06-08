@@ -4,8 +4,8 @@
 
 :root {
   color-scheme: light;
-  background: #ffffff;
-  color: #111111;
+  background: #fff7f2;
+  color: #1a1010;
 }
 
 * {
@@ -19,9 +19,9 @@ html {
 body {
   margin: 0;
   background:
-    linear-gradient(180deg, rgba(255, 0, 0, 0.045), transparent 22rem),
-    #ffffff;
-  color: #111111;
+    linear-gradient(180deg, rgba(217, 4, 4, 0.08), transparent 24rem),
+    #fff7f2;
+  color: #1a1010;
   overflow-x: hidden;
 }
 
@@ -51,11 +51,11 @@ body {
 }
 
 .button-primary {
-  @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-grillRed px-5 py-3 text-center text-xs font-black uppercase tracking-wide text-white shadow-xl shadow-red-600/30 transition hover:-translate-y-1 hover:bg-red-700 hover:shadow-2xl hover:shadow-red-600/25 focus:outline-none focus:ring-4 focus:ring-red-300 sm:px-6 sm:text-sm;
+  @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-grillRed px-5 py-3 text-center text-xs font-black uppercase tracking-wide text-white shadow-xl shadow-red-900/25 transition hover:-translate-y-1 hover:bg-red-800 hover:shadow-2xl hover:shadow-red-900/20 focus:outline-none focus:ring-4 focus:ring-red-300 sm:px-6 sm:text-sm;
 }
 
 .button-secondary {
-  @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-full border-2 border-red-100 bg-white px-5 py-3 text-center text-xs font-black uppercase tracking-wide text-grillRed shadow-xl shadow-red-600/10 transition hover:-translate-y-1 hover:border-grillRed hover:bg-grillRed hover:text-white focus:outline-none focus:ring-4 focus:ring-red-200 sm:px-6 sm:text-sm;
+  @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-full border-2 border-red-200 bg-[#fff9f6] px-5 py-3 text-center text-xs font-black uppercase tracking-wide text-grillRed shadow-xl shadow-red-900/10 transition hover:-translate-y-1 hover:border-grillRed hover:bg-grillRed hover:text-white focus:outline-none focus:ring-4 focus:ring-red-200 sm:px-6 sm:text-sm;
 }
 
 .button-outline-dark {
@@ -63,7 +63,7 @@ body {
 }
 
 .premium-card {
-  @apply border border-red-100 bg-white shadow-[0_22px_70px_rgba(255,0,0,0.1)];
+  @apply border border-red-200/70 bg-[#fffdfb] shadow-[0_22px_70px_rgba(90,20,20,0.12)];
 }
 
 .red-stripes {
