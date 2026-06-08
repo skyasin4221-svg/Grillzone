@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  background: #ffffff;
+  color: #111111;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    linear-gradient(180deg, rgba(255, 0, 0, 0.045), transparent 22rem),
+    #ffffff;
+  color: #111111;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #ff0000;
+  color: #ffffff;
+}
+
+.container-pad {
+  @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+.section-pad {
+  @apply py-12 sm:py-20 lg:py-24;
+}
+
+.eyebrow {
+  @apply text-xs font-black uppercase tracking-[0.16em] text-grillRed sm:text-sm sm:tracking-[0.22em];
+}
+
+.heading-xl {
+  @apply font-display text-4xl font-black uppercase leading-[0.95] sm:text-7xl lg:text-8xl;
+}
+
+.heading-lg {
+  @apply font-display text-3xl font-black uppercase leading-none sm:text-5xl lg:text-6xl;
+}
+
+.button-primary {
+  @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-grillRed px-5 py-3 text-center text-xs font-black uppercase tracking-wide text-white shadow-xl shadow-red-600/30 transition hover:-translate-y-1 hover:bg-red-700 hover:shadow-2xl hover:shadow-red-600/25 focus:outline-none focus:ring-4 focus:ring-red-300 sm:px-6 sm:text-sm;
+}
+
+.button-secondary {
+  @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-full border-2 border-red-100 bg-white px-5 py-3 text-center text-xs font-black uppercase tracking-wide text-grillRed shadow-xl shadow-red-600/10 transition hover:-translate-y-1 hover:border-grillRed hover:bg-grillRed hover:text-white focus:outline-none focus:ring-4 focus:ring-red-200 sm:px-6 sm:text-sm;
+}
+
+.button-outline-dark {
+  @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-full border-2 border-red-100 bg-white px-5 py-3 text-center text-xs font-black uppercase tracking-wide text-grillRed transition hover:-translate-y-0.5 hover:border-grillRed hover:bg-grillRed hover:text-white focus:outline-none focus:ring-4 focus:ring-red-300 sm:px-6 sm:text-sm;
+}
+
+.premium-card {
+  @apply border border-red-100 bg-white shadow-[0_22px_70px_rgba(255,0,0,0.1)];
+}
+
+.red-stripes {
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(255, 0, 0, 0.95) 0,
+    rgba(255, 0, 0, 0.95) 9px,
+    rgba(255, 255, 255, 0.95) 9px,
+    rgba(255, 255, 255, 0.95) 18px
+  );
+}
+
+.grill-lines {
+  background-image: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.13),
+    transparent
+  );
+  animation: shine 4s ease-in-out infinite;
+}
+
+.marquee-track {
+  animation: marquee 26s linear infinite;
+}
+
+.float-slow {
+  animation: float 5s ease-in-out infinite;
+}
+
+.float-delay {
+  animation: float 5.5s ease-in-out 0.8s infinite;
+}
+
+.hero-sweep {
+  animation: heroSweep 8s ease-in-out infinite;
+}
+
+.pulse-soft {
+  animation: pulseSoft 2.8s ease-in-out infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  35%,
+  65% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes heroSweep {
+  0%,
+  100% {
+    transform: translateX(-8%) skewX(-12deg);
+  }
+
+  50% {
+    transform: translateX(8%) skewX(-12deg);
+  }
+}
+
+@keyframes pulseSoft {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.04);
+    opacity: 0.82;
+  }
+}
