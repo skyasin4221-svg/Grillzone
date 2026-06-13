@@ -16,7 +16,7 @@ export default function HomePage() {
       <Hero />
       <FlavourMarquee />
 
-      <section className="section-pad bg-white">
+      <section className="section-pad bg-[#fff7f2]">
         <div className="container-pad">
           <Reveal>
             <SectionHeading
@@ -35,7 +35,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section-pad bg-red-50 text-black">
+      <section className="section-pad bg-grillBlack text-white">
         <div className="container-pad grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <Reveal>
             <div className="relative aspect-[4/5] overflow-hidden rounded-[8px]">
@@ -47,16 +47,17 @@ export default function HomePage() {
               <SectionHeading
                 eyebrow="Why choose us"
                 title="A proper grill house standard"
-                text="Premium does not have to feel precious. We focus on fresh prep, high heat, clean kitchens and generous food that travels well."
+                text="Fresh prep, high heat, clean kitchens and generous food presented with a sharper restaurant standard."
+                inverted
               />
             </Reveal>
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               {whyChooseUs.map((item, index) => (
                 <Reveal key={item.title} delay={index * 0.06}>
-                  <div className="rounded-[8px] border border-red-100 bg-white p-5 shadow-[0_16px_45px_rgba(255,0,0,0.08)]">
+                  <div className="rounded-[8px] border border-white/10 bg-white/[0.07] p-5 shadow-[0_16px_45px_rgba(0,0,0,0.18)] backdrop-blur">
                     <item.icon className="text-grillRed" size={28} />
                     <h3 className="mt-4 text-lg font-black uppercase">{item.title}</h3>
-                    <p className="mt-2 text-sm leading-6 text-black/60">{item.text}</p>
+                    <p className="mt-2 text-sm leading-6 text-white/62">{item.text}</p>
                   </div>
                 </Reveal>
               ))}
@@ -65,12 +66,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-white py-10">
+      <section className="bg-[#fff7f2] py-10">
         <div className="container-pad grid gap-4 sm:grid-cols-3">
           {stats.map((stat) => (
             <div key={stat.label} className="rounded-[8px] border border-red-100 bg-red-50/40 p-6 text-center">
               <p className="font-display text-6xl uppercase text-grillRed">
-                <AnimatedCounter value={stat.value} />+
+                <AnimatedCounter value={stat.value} />{stat.suffix ?? "+"}
               </p>
               <p className="mt-2 text-sm font-black uppercase tracking-wide text-black/55">{stat.label}</p>
             </div>
@@ -78,7 +79,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section-pad bg-white">
+      <section className="section-pad bg-[#fff7f2]">
         <div className="container-pad grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
           <Reveal>
             <SectionHeading
@@ -93,8 +94,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section-pad bg-white">
-        <div className="container-pad grid gap-8 rounded-[8px] border border-red-100 bg-grillRed p-6 text-white shadow-[0_24px_70px_rgba(255,0,0,0.2)] sm:p-10 lg:grid-cols-[1fr_auto] lg:items-center">
+      <section className="section-pad bg-[#fff7f2]">
+        <div className="container-pad grid gap-8 rounded-[8px] border border-red-950/20 bg-gradient-to-r from-grillBlack to-grillRed p-6 text-white shadow-[0_24px_70px_rgba(55,12,12,0.22)] sm:p-10 lg:grid-cols-[1fr_auto] lg:items-center">
           <div>
             <p className="eyebrow">Contact</p>
             <h2 className="mt-3 font-display text-5xl uppercase leading-none sm:text-6xl">

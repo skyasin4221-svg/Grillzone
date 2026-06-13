@@ -1,4 +1,4 @@
-import {
+﻿import {
   Award,
   Beef,
   Clock,
@@ -18,7 +18,16 @@ export const site = {
   email: "hello@grillzoneoriginal.co.uk",
   orderUrl: "https://deliveroo.co.uk/menu/colchester/colchester/grill-zone-original",
   mapUrl: "https://www.google.com/maps/search/?api=1&query=Grill%20Zone%20Original%20120%20High%20St%20Colchester%20CO1%201SZ",
-  socials: ["Instagram", "TikTok", "Facebook"]
+  socials: [
+    {
+      label: "Instagram",
+      href: "https://www.instagram.com/grillzoneoriginal?igsh=djdmZ2t0ejY1andk"
+    },
+    {
+      label: "TikTok",
+      href: "https://www.tiktok.com/@grillzone2?_r=1&_t=ZN-979h2XOJRSQ"
+    }
+  ]
 };
 
 export const navItems = [
@@ -30,7 +39,7 @@ export const navItems = [
 ];
 
 export const images = {
-  hero: "/images/grillzone-hero-red-white-v2.png",
+  hero: "/images/grillzone-hero-luxury.png",
   counterMeals:
     "https://img3.restaurantguru.com/c844-Restaurant-Grill-Zone-Original-meals.jpg",
   interior:
@@ -116,8 +125,8 @@ export const whyChooseUs = [
 ];
 
 export const stats = [
-  { label: "Menu favourites", value: 40 },
-  { label: "High Street location", value: 120 },
+  { label: "Menu favourites", value: 40, suffix: "+" },
+  { label: "Colchester High Street restaurant", value: 1, suffix: "" },
   { label: "Public review votes", value: 88 }
 ];
 

@@ -90,6 +90,10 @@ body {
   animation: marquee 26s linear infinite;
 }
 
+.luxury-tab-track {
+  animation: marquee 22s linear infinite;
+}
+
 .float-slow {
   animation: float 5s ease-in-out infinite;
 }

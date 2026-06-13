@@ -41,7 +41,12 @@ export function Navbar() {
           ))}
         </div>
 
-        <a href={site.orderUrl} target="_blank" rel="noreferrer" className="button-primary hidden lg:inline-flex">
+        <a
+          href={site.orderUrl}
+          target="_blank"
+          rel="noreferrer"
+          className="hidden min-h-12 items-center justify-center gap-2 rounded-full bg-grillRed px-6 py-3 text-sm font-black uppercase tracking-wide text-white shadow-xl shadow-red-900/25 transition hover:-translate-y-1 hover:bg-red-800 hover:shadow-2xl hover:shadow-red-900/20 focus:outline-none focus:ring-4 focus:ring-red-300 lg:inline-flex"
+        >
           <ShoppingBag size={18} />
           Order Now
         </a>

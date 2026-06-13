@@ -1,8 +1,8 @@
 const items = [
-  "Flame Grilled",
-  "Bright Red Heat",
+  "Premium Grill",
+  "Original Fire",
   "Fresh Chicken",
-  "Stacked Burgers",
+  "Late Night Food",
   "Peri Peri",
   "Crispy Wings",
   "Family Buckets",
@@ -13,7 +13,7 @@ export function FlavourMarquee() {
   const repeated = [...items, ...items];
 
   return (
-    <div className="overflow-hidden border-y border-red-100 bg-grillRed py-4 text-white">
+    <div className="overflow-hidden border-y border-red-950/30 bg-grillBlack py-4 text-white">
       <div className="marquee-track flex w-max gap-10">
         {repeated.map((item, index) => (
           <span

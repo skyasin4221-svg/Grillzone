@@ -3,10 +3,10 @@ import { site } from "@/lib/data";
 
 export function OrderBanner() {
   return (
-    <section className="bg-grillRed text-white">
+    <section className="bg-gradient-to-r from-grillRed via-red-900 to-grillBlack text-white">
       <div className="container-pad flex flex-col gap-5 py-10 md:flex-row md:items-center md:justify-between">
         <div>
-          <p className="font-display text-4xl uppercase leading-none sm:text-5xl">Hungry now?</p>
+          <p className="font-display text-4xl uppercase leading-none sm:text-5xl">Order Grill Zone Original</p>
           <p className="mt-2 max-w-2xl text-sm font-semibold text-white/80">
             Build your Grill Zone order from crispy chicken, flame-grilled peri peri, burgers,
             wraps and fresh sides.

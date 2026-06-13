@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Clock, ExternalLink, Instagram, Mail, MapPin, Navigation, Phone } from "lucide-react";
+import { Clock, ExternalLink, Instagram, Mail, MapPin, Music2, Navigation, Phone } from "lucide-react";
 import { ContactForm } from "@/components/contact-form";
 import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/reveal";
@@ -34,7 +34,7 @@ export default function ContactPage() {
               <SectionHeading
                 eyebrow="Get in touch"
                 title="Tell the team what you need"
-                text="Use the form for bookings, catering-style enquiries or general questions. For same-day food orders, phone or WhatsApp is fastest."
+                text="Use the form for bookings, catering-style enquiries or general questions. For same-day food orders, phone or order online is fastest."
               />
               <div className="mt-8 grid gap-4">
                 <a href={`tel:${site.phone}`} className="flex items-center gap-3 rounded-[8px] border border-red-100 bg-white p-4 font-bold shadow-sm shadow-red-600/5 transition hover:border-grillRed hover:text-grillRed">
@@ -77,9 +77,15 @@ export default function ContactPage() {
               </div>
               <div className="mt-8 flex flex-wrap gap-3">
                 {site.socials.map((social) => (
-                  <a key={social} href="#" className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-black uppercase tracking-wide text-black transition hover:bg-grillRed hover:text-white">
-                    <Instagram size={15} />
-                    {social}
+                  <a
+                    key={social.label}
+                    href={social.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-black uppercase tracking-wide text-black transition hover:bg-grillRed hover:text-white"
+                  >
+                    {social.label === "Instagram" ? <Instagram size={15} /> : <Music2 size={15} />}
+                    {social.label}
                   </a>
                 ))}
               </div>

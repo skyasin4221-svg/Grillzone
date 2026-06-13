@@ -9,15 +9,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        grillRed: "#D90404",
-        grillBlack: "#1A1010"
+        grillRed: "#B90E16",
+        grillBlack: "#140909"
       },
       fontFamily: {
         sans: ["var(--font-inter)", "Arial", "sans-serif"],
         display: ["var(--font-bebas)", "Arial", "sans-serif"]
       },
       boxShadow: {
-        premium: "0 24px 70px rgba(17, 17, 17, 0.18)"
+        premium: "0 24px 70px rgba(55, 12, 12, 0.18)"
       }
     }
   },

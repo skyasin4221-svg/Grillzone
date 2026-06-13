@@ -1,11 +1,11 @@
 import type { Metadata, Viewport } from "next";
 import { Bebas_Neue, Inter } from "next/font/google";
 import type { ReactNode } from "react";
+import { FloatingOrderButton } from "@/components/floating-order-button";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { OrderBanner } from "@/components/order-banner";
 import { PageTransition } from "@/components/page-transition";
-import { WhatsAppButton } from "@/components/whatsapp-button";
 import { site } from "@/lib/data";
 import "./globals.css";
 
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     siteName: site.name,
     images: [
       {
-        url: "/images/grillzone-hero-red-white-v2.png",
+        url: "/images/grillzone-hero-luxury.png",
         width: 1200,
         height: 630,
         alt: "Fresh Grill Zone Original food spread"
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: site.name,
     description: "Freshly grilled chicken, burgers, peri peri, doner wraps and Sunday Nashta.",
-    images: ["/images/grillzone-hero-red-white-v2.png"]
+    images: ["/images/grillzone-hero-luxury.png"]
   }
 };
 
@@ -81,7 +81,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <PageTransition>{children}</PageTransition>
         <OrderBanner />
         <Footer />
-        <WhatsAppButton />
+        <FloatingOrderButton />
       </body>
     </html>
   );
