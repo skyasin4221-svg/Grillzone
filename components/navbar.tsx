@@ -54,10 +54,16 @@ export function Navbar() {
             <Link
               key={item.href}
               href={item.href}
+              aria-current={pathname === item.href ? "page" : undefined}
               className={cn(
-                "text-sm font-black uppercase tracking-wide transition",
-                heroMode ? "text-white/76 hover:text-white" : "text-black/60 hover:text-grillRed",
-                pathname === item.href && (heroMode ? "text-white" : "text-grillRed")
+                "rounded-full px-3 py-2 text-sm font-black uppercase tracking-wide transition",
+                heroMode
+                  ? "text-white/78 hover:bg-white/10 hover:text-white"
+                  : "text-black/68 hover:bg-red-50 hover:text-grillRed",
+                pathname === item.href &&
+                  (heroMode
+                    ? "bg-white/15 text-white ring-1 ring-white/20"
+                    : "bg-grillRed text-white shadow-lg shadow-red-900/15 hover:bg-grillRed hover:text-white")
               )}
             >
               {item.label}

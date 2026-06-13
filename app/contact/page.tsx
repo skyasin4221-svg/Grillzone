@@ -12,9 +12,8 @@ export const metadata: Metadata = {
 };
 
 const hours = [
-  ["Sunday - Wednesday", "11:30 - 22:00"],
-  ["Thursday", "11:30 - 00:00"],
-  ["Friday - Saturday", "11:30 - 04:00"],
+  ["Monday - Saturday", "11:00 AM - 10:00 PM"],
+  ["Sunday", "9:00 AM - 10:00 PM"],
   ["Delivery platforms", "Check live availability"]
 ];
 

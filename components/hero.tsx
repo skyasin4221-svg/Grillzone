@@ -7,7 +7,7 @@ import Link from "next/link";
 import { images, site } from "@/lib/data";
 
 export function Hero() {
-  const luxuryTabs = ["Charcoal grill", "Fresh naan", "Open late", "Family buckets", "Sunday Nashta", "Peri peri"];
+  const luxuryTabs = ["Charcoal grill", "Fresh naan", "Open daily", "Family buckets", "Sunday Nashta", "Peri peri"];
   const movingTabs = [...luxuryTabs, ...luxuryTabs];
 
   return (

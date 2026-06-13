@@ -44,7 +44,7 @@ export function Footer() {
           <div className="mt-5 grid gap-4 text-sm text-white/62">
             <p className="flex gap-3"><MapPin className="mt-0.5 shrink-0 text-grillRed" size={18} />{site.address}</p>
             <p className="flex gap-3"><Phone className="mt-0.5 shrink-0 text-grillRed" size={18} />{site.phone}</p>
-            <p className="flex gap-3"><Clock className="mt-0.5 shrink-0 text-grillRed" size={18} />Sun-Wed 11:30-22:00, Thu 11:30-00:00, Fri-Sat 11:30-04:00</p>
+            <p className="flex gap-3"><Clock className="mt-0.5 shrink-0 text-grillRed" size={18} />Mon-Sat 11:00 AM-10:00 PM, Sun 9:00 AM-10:00 PM</p>
           </div>
         </div>
       </div>

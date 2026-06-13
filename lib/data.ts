@@ -312,7 +312,7 @@ export const galleryImages = [
 export const values = [
   { title: "Original Recipes", icon: Award },
   { title: "Fresh Meat", icon: Beef },
-  { title: "Open Late", icon: Clock },
+  { title: "Open Daily", icon: Clock },
   { title: "Local Favourite", icon: Star },
   { title: "Easy To Find", icon: MapPin }
 ];
