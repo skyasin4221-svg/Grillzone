@@ -3,16 +3,34 @@
 import { Menu, ShoppingBag, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { navItems, site } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  const heroMode = pathname === "/" && !scrolled && !open;
+
+  useEffect(() => {
+    const updateScrolled = () => setScrolled(window.scrollY > 40);
+
+    updateScrolled();
+    window.addEventListener("scroll", updateScrolled, { passive: true });
+
+    return () => window.removeEventListener("scroll", updateScrolled);
+  }, []);
 
   return (
-    <header className="fixed left-0 right-0 top-0 z-50 border-b border-red-200/70 bg-[#fff7f2]/96 text-black shadow-lg shadow-red-900/10 backdrop-blur-xl">
+    <header
+      className={cn(
+        "fixed left-0 right-0 top-0 z-50 border-b backdrop-blur-xl transition-colors duration-300",
+        heroMode
+          ? "border-white/10 bg-grillBlack/70 text-white shadow-none"
+          : "border-red-200/70 bg-[#fff7f2]/95 text-black shadow-lg shadow-red-900/10"
+      )}
+    >
       <nav className="container-pad flex h-20 items-center justify-between">
         <Link href="/" className="flex min-w-0 items-center gap-2 sm:gap-3" onClick={() => setOpen(false)}>
           <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-grillRed font-display text-2xl leading-none text-white sm:h-12 sm:w-12 sm:text-3xl">
@@ -20,7 +38,12 @@ export function Navbar() {
           </span>
           <span className="min-w-0 leading-none">
             <span className="block truncate font-display text-2xl uppercase tracking-wide min-[390px]:text-3xl">{site.name}</span>
-            <span className="block truncate text-[10px] font-bold uppercase tracking-[0.18em] text-grillRed/70 sm:text-xs sm:tracking-[0.25em]">
+            <span
+              className={cn(
+                "block truncate text-[10px] font-bold uppercase tracking-[0.18em] transition-colors sm:text-xs sm:tracking-[0.25em]",
+                heroMode ? "text-white/72" : "text-grillRed/70"
+              )}
+            >
               Flame Grilled
             </span>
           </span>
@@ -32,8 +55,9 @@ export function Navbar() {
               key={item.href}
               href={item.href}
               className={cn(
-                "text-sm font-black uppercase tracking-wide text-black/60 transition hover:text-grillRed",
-                pathname === item.href && "text-grillRed"
+                "text-sm font-black uppercase tracking-wide transition",
+                heroMode ? "text-white/76 hover:text-white" : "text-black/60 hover:text-grillRed",
+                pathname === item.href && (heroMode ? "text-white" : "text-grillRed")
               )}
             >
               {item.label}
@@ -54,7 +78,10 @@ export function Navbar() {
         <button
           type="button"
           aria-label="Toggle navigation"
-          className="grid h-11 w-11 place-items-center rounded-full border border-red-100 bg-red-50 text-grillRed lg:hidden"
+          className={cn(
+            "grid h-11 w-11 place-items-center rounded-full border transition-colors lg:hidden",
+            heroMode ? "border-white/20 bg-white/10 text-white" : "border-red-100 bg-red-50 text-grillRed"
+          )}
           onClick={() => setOpen((value) => !value)}
         >
           {open ? <X size={22} /> : <Menu size={22} />}
